@@ -1,3 +1,8 @@
+from final_objects import YEARS
+import time
+
+start = time.time()
+
 def merge_sort(array):
   if len(array) <= 1:
     return array
@@ -22,4 +27,7 @@ def merge(left, right):
   new_array.extend(right[j:])
   return new_array 
 
-# merge_sort(Date)
+merge_sort(YEARS)
+
+end = time.time()
+print(f"total time: {str(end - start)}")
